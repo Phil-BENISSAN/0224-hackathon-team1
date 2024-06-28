@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  # SERVICE FASTAPI 
+  fastapi:
+    build: ./data-fastapi
+    ports:
+      - "8000:8000"
+
+  # SERVICE STREAMLIT 
+  streamlit:
+    build: ./data-streamlit
+    ports:
+      - "8501:8501"
+
+
+  # SERVICE REACT    
+  react:
+    build: ./dev-react
+    ports:
+      - "80:80"
