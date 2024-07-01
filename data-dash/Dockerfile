@@ -1,4 +1,4 @@
-# Dockerfile.streamlit
+# Dockerfile.fastapi
 
 # ETAPE 1 : SELECTION DE L'IMAGE DE BASE
 FROM python:3.9-slim
@@ -25,16 +25,15 @@ RUN rm -rf /tmp/*
     # Supprimer les logs :
 RUN rm -rf /var/log/*
 
-    # Supprimer les caches de langage
+    # Supprimer les caches de langage  E
 RUN apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* \ /var/cache/apt/archives/* /tmp/* /var/tmp/*
 
 
 # ______________________________________________________________________________________________________________________
 
-# Exposer le port utilisé par Streamlit
-EXPOSE 8501
 
-HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
+# Exposer le port utilisé par Dash
+EXPOSE 8050
 
-# Lancer l'application Streamlit
-ENTRYPOINT ["streamlit", "run", "main.py", "--server.port=8501", "--server.enableCORS=false"]
+# Lancer l'application FastAPI
+CMD ["python", "./app/main.py", "--host", "0.0.0.0", "--port", "8050"]

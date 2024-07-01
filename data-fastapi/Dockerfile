@@ -11,7 +11,7 @@ COPY . /app /app
 
 
 # ETAPE 3 : INSTALLATION DES DEPENDANCES & MISE A JOUR DES PACKAGES
-RUN pip install fastapi uvicorn
+RUN pip install -r requirements.txt
 
     # Bonne pratique : commandes RUN combinées 
 RUN apt-get update && apt-get install -y 
