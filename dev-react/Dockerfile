@@ -1,32 +1,36 @@
-# Utiliser une image de base Node
-FROM node:14 AS build
+# Dockerfile.vite-react
 
-# Définir le répertoire de travail dans le conteneur
+# ETAPE 1 : SELECTION DE L'IMAGE DE BASE
+FROM node:18-alpine
+
+# Espace de travail
 WORKDIR /app
 
-# Copier les fichiers package.json et package-lock.json
-COPY package*.json ./
+# ETAPE 2 : COPIE DU FICHIER DANS L'IMAGE
+COPY package.json .
 
-# Installer les dépendances
+# ETAPE 3 : INSTALLATION DES DEPENDANCES & MISE A JOUR DES PACKAGES
 RUN npm install
 
-# Copier le reste de l'application
 COPY . .
 
-# Donne les permissions pour npm run build
-RUN chmod +x node_modules/.bin/react-scripts
+# ______________________________________________________________________________________________________________________
 
-# Compiler l'application React
-RUN npm run build
 
-# Utiliser une image de serveur pour servir les fichiers statiques
-FROM nginx:alpine
+EXPOSE 8080
 
-# Copier les fichiers de build React dans le répertoire NGINX
-COPY --from=build /app/build /usr/share/nginx/html
+CMD [ "npm", "run", "dev" ]
 
-# Exposer le port 80
-EXPOSE 80
+# This should be good enough to run our development environment. 
+# But for serving the build, we need to change it a bit(look for the newer version).
 
-# Démarrer NGINX
-CMD ["nginx", "-g", "daemon off;"]
+# This is the newer version
+# FROM node:18-alpine
+# WORKDIR /app
+# COPY package.json .
+# RUN npm install
+# RUN npm i -g serve
+# COPY . .
+# RUN npm run build
+# EXPOSE 3000
+# CMD [ "serve", "-s", "dist" ]
