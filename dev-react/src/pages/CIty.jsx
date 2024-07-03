@@ -1,7 +1,11 @@
+import InfoCard from "../components/InfoCard";
+
 function CIty() {
   return (
-    <div>CIty</div>
-  )
+    <main>
+      <InfoCard />
+    </main>
+  );
 }
 
-export default CIty
+export default CIty;

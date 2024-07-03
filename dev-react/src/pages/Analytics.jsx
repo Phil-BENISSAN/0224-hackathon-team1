@@ -1,7 +1,5 @@
 function Analyse() {
-  return (
-    <div>Analyse</div>
-  )
+  return <main>Analyse</main>;
 }
 
 export default Analyse
