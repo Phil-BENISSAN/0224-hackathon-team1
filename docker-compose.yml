@@ -21,8 +21,15 @@ services:
 
   # SERVICE REACT    
   react:
-    build: ./dev-react
+    build: 
+      context: ./dev-react
+      dockerfile: Dockerfile
     ports:
-      - 8080:8080
+      - "8080:8080"
+    volumes:
+      - ./dev-react:/app            # Monte le répertoire de travail local dans le conteneur
+      - /app/node_modules           # Préserve les node_modules du conteneur
     environment:
-      NODE_ENV: development      
+      - CHOKIDAR_USEPOLLING=true
+      - HOST=0.0.0.0
+    command: npm run dev
