@@ -1,11 +1,11 @@
 /* eslint-disable import/no-unresolved */
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Ally } from "swiper/modules";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../assets/styles/slider.css";
-import { Navigation, Pagination } from "swiper/modules";
-import { Link } from "react-router-dom";
 
 export default function Slider({ countries }) {
   return (
@@ -14,7 +14,7 @@ export default function Slider({ countries }) {
       loop
       navigation
       pagination={{ clickable: true }}
-      modules={[Navigation, Pagination]}
+      modules={[Navigation, Pagination, Ally]}
       breakpoints={{
         320: {
           slidesPerView: 1,
