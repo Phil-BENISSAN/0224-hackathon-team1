@@ -1,5 +1,11 @@
+import DataSection from "../components/DataSection";
+
 function Home() {
-  return <main>Home</main>;
+  return (
+    <main>
+      <DataSection />
+    </main>
+  );
 }
 
-export default Home
+export default Home;
