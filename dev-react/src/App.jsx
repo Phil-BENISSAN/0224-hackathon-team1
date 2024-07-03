@@ -1,10 +1,7 @@
+import { Outlet } from "react-router-dom";
+
 function App() {
-  return (
-    <>
-      <p className="text-red-600">TEST</p>
-      <p>sdgsg</p>
-    </>
-  );
+  return <Outlet />;
 }
 
 export default App;

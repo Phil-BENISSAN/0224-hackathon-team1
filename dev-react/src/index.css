@@ -8,6 +8,73 @@
   box-sizing: border-box;
 }
 
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: .9rem;
+}
+
+header {
+    padding: .5rem 1rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+footer {
+    padding: 1rem;
+}
+
+section {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 1rem 2rem;
+    }
+    
+    main {
+        padding: 2rem;
+    }
+    
+    footer {
+        padding: 2rem;
+    }
+    
+}
+
+
+@media screen and (min-width: 1024px) {
+    header {
+        padding: 1rem 3rem;
+    }
+    
+    main {
+        padding: 3rem;
+    }
+    
+    footer {
+        padding: 3rem;
+    }
+    
+}
+
+
 .swiper-pagination-bullet {
   background-color: #ffffff;
   opacity: 1;
