@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { Link, useLoaderData } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -8,12 +8,10 @@ import "swiper/css/pagination";
 import "../index.css";
 import "./slider.css";
 
-export default function Slider() {
-  const countries = useLoaderData();
-  console.log(countries);
+export default function Slider({ continent }) {
   return (
-    <section>
-      <h2 className="w-full text-center">Europe</h2>
+    <section className="lg:px-8">
+      <h2 className="w-full text-center">{continent[0].continent}</h2>
       <Swiper
         className="my-2 md:my-6 lg:my-8"
         loop
@@ -30,29 +28,29 @@ export default function Slider() {
             spaceBetween: 24,
           },
           1024: {
-            slidesPerView: 3.3,
+            slidesPerView: 4,
             spaceBetween: 32,
           },
           1280: {
-            slidesPerView: 4.3,
+            slidesPerView: 4,
             spaceBetween: 32,
           },
         }}
       >
-        {countries.map((country) => (
-          <SwiperSlide key={country.id}>
+        {continent.map((country) => (
+          <SwiperSlide key={country.pays}>
             <Link
               to={`/`}
               className="flex flex-col text-center text-dark-color"
             >
               <img
-                src="https://www.lightstalking.com/wp-content/uploads/zdenek-machacek-HYTwWSE5ztw-unsplash-1024x809.jpg.webp"
-                alt={country.name}
+                src={country.img_src}
+                alt={`photo de ${country.pays} `}
                 className="rounded-xl mb-4 aspect-[5/6] object-cover"
               />
-              {country.name}
+              <span className="font-medium text-lg">{country.pays}</span>
             </Link>
-            <p>{country.description}</p>
+            <p className="text-sm lg:text-base text-center">{`${country.description_pays.substring(0, 50)}...`}</p>
           </SwiperSlide>
         ))}
       </Swiper>
