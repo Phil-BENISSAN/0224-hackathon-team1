@@ -9,9 +9,16 @@ services:
 
   # SERVICE FASTAPI 
   fastapi:
-    build: ./data-fastapi
+    build: 
+      context: ./data-fastapi
+      dockerfile : Dockerfile
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - ./data-fastapi:/app           # Monte le répertoire de travail dans le conteneur
     ports:
-      - "8000:8000"
+      - "8000:8000"      
+    restart: on-failure
+
 
   # SERVICE STREAMLIT 
   streamlit:
@@ -27,8 +34,8 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./dev-react:/app            # Monte le répertoire de travail local dans le conteneur
-      - /app/node_modules           # Préserve les node_modules du conteneur
+      - ./dev-react:/app              # Monte le répertoire de travail local dans le conteneur
+      - /app/node_modules             # Préserve les node_modules du conteneur
     environment:
       - CHOKIDAR_USEPOLLING=true
       - HOST=0.0.0.0
