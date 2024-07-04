@@ -33,7 +33,7 @@ def fn_fast_api():
 # Route pour récupérer le fichier CSV en JSON
 @app.get('/')
 def read_root():
-    return {"donnees": [data]}
+    return {"donnees": data }
 
 # ---------------- FIN DE TON CODE ----------------
 
