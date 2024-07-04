@@ -1,13 +1,12 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
 import City from "./pages/City.jsx";
 import Analytics from "./pages/Analytics.jsx";
 import Contact from "./pages/Contact.jsx";
 import "./index.css";
-import data from "../data.json";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +15,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => data,
+        loader: () =>
+          fetch("http://localhost:8000/")
+            .then((res) => res.json())
+            .then((data) => data)
+            .catch((error) => console.error(error)),
       },
       {
         path: "/country/:pays",
