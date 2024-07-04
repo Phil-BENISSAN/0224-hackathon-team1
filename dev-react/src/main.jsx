@@ -7,6 +7,7 @@ import City from "./pages/City.jsx";
 import Analytics from "./pages/Analytics.jsx";
 import Contact from "./pages/Contact.jsx";
 import "./index.css";
+import data from "../data.json";
 
 const router = createBrowserRouter([
   {
@@ -15,17 +16,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () => data,
       },
       {
         path: "/country",
         element: <City />,
       },
       {
-        path: "/Analytics",
+        path: "/analytics",
         element: <Analytics />,
       },
       {
-        path: "/Contact",
+        path: "/contact",
         element: <Contact />,
       },
     ],
