@@ -22,8 +22,10 @@ const router = createBrowserRouter([
             .catch((error) => console.error(error)),
       },
       {
-        path: "/country",
+        path: "/country/:pays",
         element: <City />,
+        loader: ({ params }) =>
+          Object.values(data).filter((country) => (country.pays = params.pays)),
       },
       {
         path: "/analytics",
