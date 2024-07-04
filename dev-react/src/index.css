@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: "Helvatica-Neue-Bold";
+    font-family: "Helvetica-Neue-Bold";
     src: url("./src/assets/fonts/HelveticaNeueBold.otf");
 }
 
@@ -19,7 +19,7 @@
     --blackColor: #1d1d1d;
     --secondaryColor: #DE4B5A;
     --thirdColor: #EDC13D;
-    --titleFont: "Helevetica-Neue-Bold";
+    --titleFont: "Helvetica-Neue-Bold";
     --textFont: "Roboto";
 }
 
@@ -68,6 +68,11 @@ section {
     width: 100%;
 }
 
+label {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
 @media screen and (min-width: 768px) {
 
 h1 {
@@ -99,33 +104,34 @@ p {
     footer {
         padding: 2rem;
     }
-    
+    label {
+        font-size: 1.3rem;
+    }   
 }
-
 
 @media screen and (min-width: 1024px) {
 
-h1 {
-    font-size: 5rem;
-    font-weight: 600;
-    font-family: var(--titleFont);
-}
+    h1 {
+        font-size: 5rem;
+        font-weight: 600;
+        font-family: var(--titleFont);
+    }
 
-h2 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    font-family: var(--titleFont);
-}
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        font-family: var(--titleFont);
+    }
 
-h3 {
-    font-size: 2rem;
-    font-weight: 400;
-    font-family: var(--titleFont);
-}
+    h3 {
+        font-size: 2rem;
+        font-weight: 400;
+        font-family: var(--titleFont);
+    }
 
-p {
-    font-size: 1.2rem;
-}
+    p {
+        font-size: 1.2rem;
+    }
     header {
         padding: 1rem 3rem;
     }
@@ -133,5 +139,9 @@ p {
     footer {
         padding: 3rem;
     }
+
+    label {
+        font-size: 1.4rem;
+    } 
     
 }
