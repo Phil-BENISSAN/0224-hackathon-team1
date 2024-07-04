@@ -2,25 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Roboto";
+    src: url("./src/assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Helvatica-Neue-Bold";
+    src: url("./src/assets/fonts/HelveticaNeueBold.otf");
+}
+
+:root {
+    --primaryColor: #055A6E;
+    --primaryLight: #90B9B8;
+    --whiteColor: #F1EAD8;
+    --secondaryColor: #DE4B5A;
+    --thirdColor: #EDC13D;
+    --titleFont: "Helevetica-Neue-Bold";
+    --textFont: "Roboto";
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body {
+    background-color: var(--whiteColor);
+    font-family: var(--textFont);
+}
+
 h1 {
     font-size: 2rem;
     font-weight: 600;
+    font-family: var(--titleFont);
 }
 
 h2 {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: var(--titleFont);
 }
 
 h3 {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 400;
+    font-family: var(--titleFont);
 }
 
 p {

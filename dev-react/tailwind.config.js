@@ -8,14 +8,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primaryColor: "#FFFFFF",
-        primaryLight: "#FFFFFF",
-        primaryDark: "#FFFFFF",
-        secondaryColor: "#FFFFFF",
+        primaryColor: "#055A6E",
+        primaryLight: "#90B9B8",
+        whiteColor: "#F1EAD8",
+        secondaryColor: "#DE4B5A",
+        thirdColor: "#EDC13D",
       },
-      fonts: {
-        titleFont: "#FFFFFF",
-        textFont: "#FFFFFF",
+      fontFamily: {
+        titleFont: ["Helevetica-Neue-Bold", "sans-serif"],
+        textFont: ["Roboto", "sans-serif"],
       },
     },
   },
