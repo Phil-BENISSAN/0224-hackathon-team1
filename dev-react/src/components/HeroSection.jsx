@@ -6,7 +6,11 @@ function HeroSection() {
     <header className="relative p-4 bg-primaryColor">
       <details className="relative group">
         <summary className="relative cursor-pointer flex items-center justify-end">
-          <img src="./src/assets/react.svg" alt="Logo" className="absolute top-0 left-0 w-12 h-12" />
+          <img
+            src="./src/assets/logo-roulard.svg"
+            alt="Logo"
+            className="absolute top-0 left-0 w-12 h-12"
+          />
           <svg
             className="w-6 h-6 text-blackColor"
             xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +26,7 @@ function HeroSection() {
             <line x1="3" y1="18" x2="21" y2="18" />
           </svg>
         </summary>
-        <div className="absolute top-10 left-0 w-full rounded-2xl bg-whiteColor shadow-lg p-4 mt-4 z-10 hidden group-open:block">
+        <div className="absolute top-20 left-0 w-full rounded-2xl bg-whiteColor shadow-lg p-4 mt-4 z-10 hidden group-open:block">
           <h2 className="text-center rounded-2xl flex items-center justify-center rounded-2xl text-xl bg-primaryLight text-whiteColor font-semibold mb-4 h-28 px-20">
             Menu
           </h2>
@@ -80,13 +84,13 @@ function HeroSection() {
           </form>
         </div>
       </details>
-      <hgroup className="mt-8 flex flex-col items-center justify-center text-center h-full bg-primaryLight rounded-2xl p-8">
+      <hgroup className="mt-20 flex flex-col items-center justify-center text-center h-full bg-primaryLight rounded-2xl p-8">
+        <img src="./src/assets/Tatou01 1.png" alt="roulard" className="absolute top-16 left-50"/>
         <h1 className="text-3xl font-bold mb-4 ">Le guide du Roulard</h1>
         <p className="text-lg text-blackColor">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-          quo impedit enim, temporibus a voluptatem nostrum nisi autem dolor
-          maiores magni laudantium ipsam corporis alias rerum? Temporibus omnis
-          dolorem laborum.
+          Faites de vos voyages une expérience sans barrières ! "Le Guide du
+          Roulard" est là pour vous accompagner vers des destinations où tout le
+          monde est le bienvenu, pour un monde plus ouvert et accessible à tous.
         </p>
       </hgroup>
     </header>
