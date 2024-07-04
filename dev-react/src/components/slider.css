@@ -13,9 +13,10 @@
     background-color: var(--whiteColor);
     border-radius: 10px;
     width: 2.5rem;
-    height: 4rem;
-    opacity: 0.6;
+    height: 4.5rem;
+    opacity: 0.7;
     top: 40%;
+    transition: all ease 0.3s;
   }
   
   .swiper-button-next {
@@ -23,13 +24,14 @@
     background-color: var(--whiteColor);
     border-radius: 10px;
     width: 2.5rem;
-    height: 4rem;
-    opacity: 0.6;
-    top: 40%
+    height: 4.5rem;
+    opacity: 0.7;
+    top: 40%;
+    transition: all ease 0.3s;
   }
 
   .swiper-button-next:hover, .swiper-button-prev:hover {
-    opacity: 0.8;
+    opacity: 1;
 }
   
   @media screen and (min-width: 768px) {
