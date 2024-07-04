@@ -4,8 +4,8 @@ import TestimonialsSwipper from "../components/TestimonialsSwipper";
 
 function Home() {
   return (
-    <main>
-      <section className="testimonials-section">
+    <main>  
+      <section className="px-4">
         <TestimonialsSwipper />
       </section>
       <DataSection />
