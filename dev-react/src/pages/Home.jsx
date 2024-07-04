@@ -1,8 +1,10 @@
 import DataSection from "../components/DataSection";
+import Slider from "../components/Slider";
 
 function Home() {
   return (
-    <main>
+    <main className="">
+      <Slider />
       <DataSection />
     </main>
   );
