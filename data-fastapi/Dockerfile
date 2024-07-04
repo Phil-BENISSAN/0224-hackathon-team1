@@ -7,7 +7,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # ETAPE 2 : COPIE DE TOUS LES FICHIERS DANS L'IMAGE
-COPY . /app /app
+COPY requirements.txt .
 
 
 # ETAPE 3 : INSTALLATION DES DEPENDANCES & MISE A JOUR DES PACKAGES
@@ -28,6 +28,8 @@ RUN rm -rf /var/log/*
     # Supprimer les caches de langage  E
 RUN apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* \ /var/cache/apt/archives/* /tmp/* /var/tmp/*
 
+COPY . .
+
 
 # ______________________________________________________________________________________________________________________
 
@@ -36,4 +38,4 @@ RUN apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* \ /var
 EXPOSE 8000
 
 # Lancer l'application FastAPI
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
