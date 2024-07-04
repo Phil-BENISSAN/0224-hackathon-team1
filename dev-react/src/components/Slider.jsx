@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { Link, useLoaderData } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
