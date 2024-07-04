@@ -16,6 +16,7 @@
     --primaryColor: #055A6E;
     --primaryLight: #90B9B8;
     --whiteColor: #F1EAD8;
+    --blackColor: #1d1d1d;
     --secondaryColor: #DE4B5A;
     --thirdColor: #EDC13D;
     --titleFont: "Helevetica-Neue-Bold";
@@ -59,7 +60,6 @@ header {
     padding: .5rem 1rem;
 }
 
-
 footer {
     padding: 1rem;
 }
@@ -69,6 +69,29 @@ section {
 }
 
 @media screen and (min-width: 768px) {
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--titleFont);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--titleFont);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--titleFont);
+}
+
+p {
+    font-size: 1rem;
+}
+
     header {
         padding: 1rem 2rem;
     }
@@ -81,6 +104,28 @@ section {
 
 
 @media screen and (min-width: 1024px) {
+
+h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    font-family: var(--titleFont);
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: var(--titleFont);
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: var(--titleFont);
+}
+
+p {
+    font-size: 1.2rem;
+}
     header {
         padding: 1rem 3rem;
     }
@@ -89,20 +134,4 @@ section {
         padding: 3rem;
     }
     
-}
-
-
-.swiper-pagination-bullet {
-  background-color: #ffffff;
-  opacity: 1;
-  transform: translateY(-0.3rem);
-}
-
-.swiper-pagination-bullet-active {
-  background-color: transparent;
-  background-image: url("../../assets/images/icon/pacman-svgrepo-com.svg");
-  background-size: cover;
-  width: 1.2rem;
-  height: 1.2rem;
-  transform: translateY(0);
 }
