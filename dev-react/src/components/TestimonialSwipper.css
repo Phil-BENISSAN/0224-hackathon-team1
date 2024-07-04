@@ -1,0 +1,43 @@
+.swiper-pagination {
+  display: none;
+}
+
+.testimonial-image {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  object-fit: cover;
+}
+
+.testimonial-title {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+
+.testimonial-text {
+  font-size: 1em;
+  margin-bottom: 16px;
+}
+
+.testimonial-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.mySwiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30rem;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: var(--primaryLight);
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--blackColor);
+    height: 28rem;
+  }
