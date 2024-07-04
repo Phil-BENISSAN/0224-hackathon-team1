@@ -1,3 +1,6 @@
 fastapi
 pandas
 uvicorn
+beautifulsoup4
+requests
+numpy
