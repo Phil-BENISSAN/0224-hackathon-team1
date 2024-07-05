@@ -7,7 +7,7 @@ function HeroSection() {
       <details className="relative group">
         <summary className="relative cursor-pointer flex items-center justify-end">
           <img
-            src="./src/assets/logo-roulard.svg"
+            src="../src/assets/logo-roulard.svg"
             alt="Logo"
             className="absolute top-0 left-0 w-12 h-12"
           />
@@ -86,9 +86,9 @@ function HeroSection() {
       </details>
       <hgroup className="mt-20 flex flex-col items-center justify-center text-center h-full bg-primaryLight rounded-2xl p-8">
         <img
-          src="./src/assets/Tatou01 1.png"
+          src="../src/assets/Tatou01 1.png"
           alt="roulard"
-          className="absolute top-16 left-50"
+          className="absolute top-16 left-50 mb-12"
         />
         <h1 className="text-3xl font-bold mb-4 ">Le guide du Roulard</h1>
         <p className="text-lg text-blackColor">
