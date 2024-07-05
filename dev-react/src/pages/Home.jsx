@@ -21,7 +21,10 @@ function Home() {
   );
 
   return (
-    <main className="flex flex-col gap-4 md:gap-6 lg:gap-8">
+    <main
+      className="flex flex-col gap-4 py-4 translate-y-[-2rem] rounded-t-3xl z-[1000] md:py-8 md:gap-6 lg:gap-8 
+     bg-whiteColor md:rounded-t-[40px] md:translate-y-[-3rem] lg:py-8 lg:rounded-t-[55px]"
+    >
       <Slider continent={europe} />
       <Slider continent={asie} />
       <Slider continent={afrique} />

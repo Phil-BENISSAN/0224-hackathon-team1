@@ -8,19 +8,19 @@ export default function DataSection() {
         <li className="flex flex-col text-center font-bold text-3xl gap-1 md:gap-2 md:text-4xl lg:gap-3 lg:text-[56px]">
           24+
           <span className="w-full font-normal text-base lg:text-lg">
-            some infos
+            agences de voyages offrant des assistances
           </span>
         </li>
         <li className="flex flex-col text-center font-bold text-3xl gap-1 md:gap-2 md:text-4xl lg:gap-3 lg:text-[56px]">
-          17M
+          +7M
           <span className="w-full font-normal text-base lg:text-lg">
-            some infos
+            de voyageurs français en situation de handicap chaques années
           </span>
         </li>
         <li className="flex flex-col text-center font-bold text-3xl gap-1 md:gap-2 md:text-4xl lg:gap-3 lg:text-[56px]">
-          +95%
+          +30 000
           <span className="w-full font-normal text-base lg:text-lg">
-            some infos
+            logement adaptées aux personnes à mobilité réduites dans le monde
           </span>
         </li>
       </ul>

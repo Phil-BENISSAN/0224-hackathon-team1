@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
-    <header className="relative p-4 bg-primaryColor">
+    <header className="relative p-4 bg-primaryColor min-h-[45vh]">
       <details className="relative group">
         <summary className="relative cursor-pointer flex items-center justify-end">
           <img

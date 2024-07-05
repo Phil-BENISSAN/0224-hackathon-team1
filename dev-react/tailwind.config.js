@@ -35,7 +35,7 @@ export default {
         error: "#ff0000",
       },
       fontFamily: {
-        titleFont: ["Helevetica-Neue-Bold", "sans-serif"],
+        titleFont: ["Helvetica-Neue-Bold", "sans-serif"],
         textFont: ["Roboto", "sans-serif"],
       },
     },
