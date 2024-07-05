@@ -10,7 +10,8 @@ export default function InfoCardCountry({ country }) {
         className="rounded-[80px] mb-10 max-w-[640px]"
       />
       <p className="font-semibold text-base lg:text-lg">
-        Score Accessibilité : <span className="font-bold">{country.score}</span>
+        Rang d'accessibilité (sur 180 pays):{" "}
+        <span className="font-bold text">{country.score}</span>
       </p>
       <p className="text-left w-full">{country.description_pays}</p>
     </section>

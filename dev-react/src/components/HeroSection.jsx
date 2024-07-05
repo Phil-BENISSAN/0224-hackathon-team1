@@ -1,16 +1,16 @@
 import { useState } from "react";
 import ToggleSwitch from "./ToggleSwitch";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function HeroSection() {
   const [isOpen, setIsOpen] = useState(false);
+  const path = useLocation();
 
-  {
-    console.log(isOpen);
-  }
+  console.log(path);
+
   return (
-    <header className="relative p-4 bg-primaryColor">
-      <details className="relative group" open={isOpen}>
+    <header className="relative p-4 bg-primaryColor min-h-[45vh]">
+      <details className="relative group p-4">
         <summary className="relative cursor-pointer flex items-center justify-end">
           <img
             src="../src/assets/logo-roulard.svg"
@@ -106,15 +106,21 @@ function HeroSection() {
           monde est le bienvenu, pour un monde plus ouvert et accessible à tous.
         </p>
       </hgroup>
-      <figure className="flex flex-start mt-4">
-        <Link
-          to="/"
-          className=" rounded-2xl text-whiteColor flex items-center justify-center h-12"
-        >
-        <img src="../src/assets/arrow-left-circle.svg" alt="retunr arrow" className="w-8 mr-4"/>
-          Retour à l'accueil
-        </Link>
-      </figure>
+      {path.pathname !== "/" && (
+        <figure className="flex flex-start mt-4">
+          <Link
+            to="/"
+            className=" rounded-2xl text-whiteColor flex items-center justify-center h-12"
+          >
+            <img
+              src="../src/assets/arrow-left-circle.svg"
+              alt="retunr arrow"
+              className="w-8 mr-4"
+            />
+            Retour à l'accueil
+          </Link>
+        </figure>
+      )}
     </header>
   );
 }
