@@ -7,7 +7,7 @@ import json
 app = FastAPI()
 
 # Charger le fichier JSON
-with open('app/data_transformed.json', 'r', encoding='utf-8') as file:
+with open('app/data_trans.json', 'r', encoding='utf-8') as file:
     data = json.load(file)
 
 # -------------------------------------------------   CONFIGURATION CORS   ------------------------------------------------------
