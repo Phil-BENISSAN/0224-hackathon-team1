@@ -19,7 +19,7 @@ function Contact() {
   };
 
   return (
-    <main>
+    <main className="p-6">
       <h1 className="flex justify-center my-5">Contact</h1>
       <section></section>
       <form

@@ -18,14 +18,17 @@ const router = createBrowserRouter([
         loader: () =>
           fetch("http://localhost:8000/")
             .then((res) => res.json())
-            .then((data) => data)
+            .then((data) => data.donnees)
             .catch((error) => console.error(error)),
       },
       {
-        path: "/country/:pays",
+        path: "/country/:id",
         element: <City />,
-        loader: ({ params }) =>
-          Object.values(data).filter((country) => (country.pays = params.pays)),
+        loader: () =>
+          fetch("http://localhost:8000/")
+            .then((res) => res.json())
+            .then((data) => data.donnees)
+            .catch((error) => console.error(error)),
       },
       {
         path: "/analytics",
