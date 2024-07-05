@@ -19,7 +19,10 @@ function Contact() {
   };
 
   return (
-    <main className="p-6">
+    <main
+      className="flex flex-col gap-4 py-4 translate-y-[-2rem] rounded-t-3xl z-[1000] md:py-8 md:gap-6 lg:gap-8 
+    bg-whiteColor md:rounded-t-[40px] md:translate-y-[-3rem] lg:py-8 lg:rounded-t-[55px] h-full w-full"
+    >
       <h1 className="flex justify-center my-5">Contact</h1>
       <section></section>
       <form

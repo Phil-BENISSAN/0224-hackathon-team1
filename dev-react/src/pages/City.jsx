@@ -33,7 +33,10 @@ function City() {
   }, [country.nom_ville]);
 
   return (
-    <main className="flex flex-col m-auto p-4 gap-8 md:p-6 translate-y-[-1rem] rounded-t-xl">
+    <main
+      className="flex flex-col m-auto p-4 gap-8 md:p-6 py-4 translate-y-[-2rem] rounded-t-3xl z-[1000] md:py-8 md:gap-6 lg:gap-8 
+    bg-whiteColor md:rounded-t-[40px] md:translate-y-[-3rem] lg:py-8 lg:rounded-t-[55px]"
+    >
       <InfoCardCountry country={country} />
       <InfoCardCity country={country} cityPic={cityPic} />
     </main>
