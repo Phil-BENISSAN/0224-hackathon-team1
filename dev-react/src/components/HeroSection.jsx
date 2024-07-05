@@ -97,7 +97,7 @@ function HeroSection() {
         <img
           src="../src/assets/Tatou01 1.png"
           alt="roulard"
-          className="absolute top-16 left-50"
+          className="absolute top-16 left-50 mb-12"
         />
         <h1 className="text-3xl font-bold mb-4 ">Le guide du Roulard</h1>
         <p className="text-lg text-blackColor">
