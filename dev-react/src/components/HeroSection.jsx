@@ -1,7 +1,13 @@
+import { useState } from "react";
 import ToggleSwitch from "./ToggleSwitch";
 import { Link } from "react-router-dom";
 
 function HeroSection() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  {
+    console.log(isOpen);
+  }
   return (
     <header className="relative p-4 bg-primaryColor min-h-[45vh]">
       <details className="relative group">
@@ -27,24 +33,27 @@ function HeroSection() {
           </svg>
         </summary>
         <div className="absolute top-20 left-0 w-full rounded-2xl bg-whiteColor shadow-lg p-4 mt-4 z-10 hidden group-open:block">
-          <h2 className="text-center rounded-2xl flex items-center justify-center text-xl bg-primaryLight text-whiteColor font-semibold mb-4 h-28 px-20">
+          <h2 className="text-center rounded-2xl flex items-center justify-center text-xl bg-primaryLight text-primary font-semibold mb-4 h-28 px-20">
             Menu
           </h2>
           <nav className="flex flex-col items-center space-y-2 mb-4">
             <Link
               to="/"
+              onClick={() => setIsOpen(!isOpen)}
               className="bg-primaryColor rounded-2xl text-whiteColor flex items-center justify-center w-60 h-12"
             >
               Accueil
             </Link>
             <Link
               to="/Analytics"
+              onClick={() => setIsOpen(!isOpen)}
               className="bg-primaryColor rounded-2xl text-whiteColor flex items-center justify-center w-60 h-12"
             >
               A propos
             </Link>
             <Link
               to="/Contact"
+              onClick={() => setIsOpen(!isOpen)}
               className="bg-primaryColor rounded-2xl text-whiteColor   flex items-center justify-center w-60 h-12"
             >
               Nous contacter
@@ -53,9 +62,9 @@ function HeroSection() {
           <form className="flex-col item-center space-y-2">
             <fieldset className="flex items-center space-x-2">
               <label className="flex-1" tabIndex="0" htmlFor="cécité">
-                Cécité
+                Deficient visuel
               </label>
-              <ToggleSwitch id="cécité" />
+              <ToggleSwitch id="cécité" value="mytheme" />
             </fieldset>
             <div className="flex items-center space-x-2">
               <label className="flex-1" tabIndex="0" htmlFor="Daltonisme">
@@ -97,6 +106,15 @@ function HeroSection() {
           monde est le bienvenu, pour un monde plus ouvert et accessible à tous.
         </p>
       </hgroup>
+      <figure className="flex flex-start mt-4">
+        <Link
+          to="/"
+          className=" rounded-2xl text-whiteColor flex items-center justify-center h-12"
+        >
+        <img src="../src/assets/arrow-left-circle.svg" alt="retunr arrow" className="w-8 mr-4"/>
+          Retour à l'accueil
+        </Link>
+      </figure>
     </header>
   );
 }
