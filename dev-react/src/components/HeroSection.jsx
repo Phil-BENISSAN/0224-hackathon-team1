@@ -27,7 +27,7 @@ function HeroSection() {
           </svg>
         </summary>
         <div className="absolute top-20 left-0 w-full rounded-2xl bg-whiteColor shadow-lg p-4 mt-4 z-10 hidden group-open:block">
-          <h2 className="text-center rounded-2xl flex items-center justify-center rounded-2xl text-xl bg-primaryLight text-whiteColor font-semibold mb-4 h-28 px-20">
+          <h2 className="text-center rounded-2xl flex items-center justify-center text-xl bg-primaryLight text-whiteColor font-semibold mb-4 h-28 px-20">
             Menu
           </h2>
           <nav className="flex flex-col items-center space-y-2 mb-4">
@@ -85,7 +85,11 @@ function HeroSection() {
         </div>
       </details>
       <hgroup className="mt-20 flex flex-col items-center justify-center text-center h-full bg-primaryLight rounded-2xl p-8">
-        <img src="./src/assets/Tatou01 1.png" alt="roulard" className="absolute top-16 left-50"/>
+        <img
+          src="./src/assets/Tatou01 1.png"
+          alt="roulard"
+          className="absolute top-16 left-50"
+        />
         <h1 className="text-3xl font-bold mb-4 ">Le guide du Roulard</h1>
         <p className="text-lg text-blackColor">
           Faites de vos voyages une expérience sans barrières ! "Le Guide du

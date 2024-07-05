@@ -40,7 +40,7 @@ export default function Slider({ continent }) {
         {continent.map((country) => (
           <SwiperSlide key={country.pays}>
             <Link
-              to={`/country/${country.pays}`}
+              to={`/country/${country.id}`}
               className="flex flex-col text-center text-dark-color"
             >
               <img

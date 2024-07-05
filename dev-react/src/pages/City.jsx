@@ -1,10 +1,12 @@
 import InfoCardCountry from "../components/InfoCardCountry";
 import InfoCardCity from "../components/InfoCardCity";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
 function City() {
-  const country = useLoaderData();
+  const { id } = useParams();
+  const countries = useLoaderData();
+  const country = countries.find((country) => country.id == id);
   const [cityPic, setCityPic] = useState(null);
 
   useEffect(() => {
